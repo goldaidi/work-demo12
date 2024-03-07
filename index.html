@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>安克諾斯 龍年禦守</title>
+    <!-- icon -->
+    <script src="https://kit.fontawesome.com/eecb5127e2.js" crossorigin="anonymous"></script>
+
+    <!--slider-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+ 
+    <!-- Bootstrap CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- animate 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">-->
+    <!-- jQuery Plugin -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+
+    <style>
+        /* 放湛揚網站 */
+        #page_top {
+            display: none;
+        }
+        #footer {
+            display: none;
+        }
+        .ul_text {
+            display: none;
+        }
+        .titleA {
+            display: none;
+        }
+        .info_content {
+            background: transparent;
+            border: none;
+        }
+        #topnav_c, #center_area {
+            max-width: 100%;
+        }
+        header {
+            padding-bottom: 0;
+        }
+        sup {
+            color: #fff;
+        }
+        /* 放湛揚網站 */
+
+        /* 標題 */
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #cf2d14;
+            background-image: url("https://x.webdo.cc/userfiles/27760799/image/out_bg.jpg");
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+        p::selection {
+            background: #D3963E;
+            color: #fff;
+        }
+        span::selection {
+            background: #16AE67;
+            color: #fff;
+        }
+        img {
+            user-select:none;
+        }
+
+        .hero {
+            overflow-x: hidden;
+            max-width: 1200px;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+        .hero img {
+            width: 100%;
+        }
+
+        .Area_active::after {
+            content: "";
+            background-image: url("https://x.webdo.cc/userfiles/27760799/image/inner_bg_opacity.png");
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 2000px;
+            height: 480px;
+            z-index: -1;
+            background-repeat: no-repeat;
+            pointer-events: none;
+            background-size: contain;
+            background-position: top;
+        }
+        .sub_title p {
+            color: #fff;
+            font-size: 1.4rem;
+        }
+
+        .Area_center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .Area_center img {
+            width: 100%;
+        }
+        .dragonimg {
+            max-width: 500px !important;
+            animation-name: dragon3d;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-delay: 1.5s;
+        }
+
+        @keyframes dragon3d {
+        0% {
+            transform: translate(0, 0) rotate(0) scale(1);
+        }
+        25% {
+            transform: translate(0, 5px) rotate(3deg);
+        }
+        50% {
+            transform: translate(0, 0) rotate(0) scale(1.05);
+            filter: brightness(1.2);
+        }
+        85% {
+            transform: translate(0, -5px) rotate(-3deg);
+            filter: brightness(1);
+        }
+        100% {
+            transform: translate(0, 0) rotate(0) scale(1);
+        }
+        }
+
+        /* 占卜效果 */
+        .container-wrap {
+            width: 500px;
+            margin: 0 auto;
+        }
+        button {
+            display: inline-block;
+            width: 300px;
+            padding: 8px;
+            background-color: #142345;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            position: relative;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+            user-select:none;
+        }
+        button:hover {
+            background-color: #214086;
+            color: #fff;
+        }
+        body:has(.quiz_btn:hover) {
+            transition: all .5s ease-in;
+            background-image: url("https://x.webdo.cc/userfiles/27760799/image/out_bg2.jpg");
+        }
+        .container-inner {
+            position: relative;
+            margin: 1rem;
+        }
+        #image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        @media(max-width:920px) {
+            #image-container {
+                height: 300px;
+            }
+        }
+        @media(max-width:576px) {
+            #image-container {
+                height: 400px;
+            }
+        }
+
+        #image-container img {
+            display: none;
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+            border: 10px solid transparent;
+        }
+        .img-txt {
+            display: flex;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-family: 'Courier New', Courier, monospace;
+            color: #fff;
+        }
+
+        /* 活動資訊 */
+        .Area_active2 {
+            content: "";
+            background-image: url("https://x.webdo.cc/userfiles/27760799/image/inner_dark_bg.jpg");
+            /* position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%); */
+            width: 100%;
+            max-width: 2000px;
+            height: auto;
+            z-index: -1;
+            background-repeat: no-repeat;
+            /* pointer-events: none; */
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px; /* 放湛揚網站 */
+        }
+        @media(max-width:576px) {
+            .Area_active2 {
+                margin-bottom: 5rem;
+            } 
+        }
+
+        .h2_title {
+            display: flex;
+            justify-content: center;
+        }
+        .h2_title h2 {
+            font-size: 2.5rem;
+            color: #fff;
+            font-weight: bold;
+            margin: 0 0 3rem;
+            padding: 0.3rem 1.4rem;
+            border: 1px solid #fff;
+            user-select:none;
+        }
+        .active_p {
+            color: #fff;
+            font-size: 1.4rem;
+        }
+        .active_p p {
+            margin: 0;
+        }
+        .active_p span {
+            color: #ffff00;
+            font-weight: bold;
+        }
+
+        /* 側邊btn */
+        .fix_tabbar {
+            position: fixed;
+            z-index: 99;
+            bottom: 400px;
+            right: 0;
+            border-radius: 20px 0 0 20px;
+            width: 110px;
+            background-color: rgba(0,0,0,.7);
+            text-align: center;
+            transition: all .2s ease;
+        }
+        .nav_wrapper {
+            list-style: none;
+            /* padding: 20px 5px; */
+            padding-left: 0;
+            color: #fff;
+            margin: 0;
+            user-select:none;
+        }
+        .nav_wrapper li {
+            padding:20px 5px;
+            margin: 0;
+        }
+        .nav_wrapper li:hover {
+            background-color: #214086;
+        }
+        .nav_wrapper li:nth-child(1):hover {
+            border-radius: 20px 0 0 0;
+        }
+        .nav_wrapper li:nth-child(3):hover {
+            border-radius: 0 0 0 20px;
+        }
+
+        .nav_wrapper li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .nav_wrapper li a:hover {
+            color: #ffff00;
+        }
+
+        @media(max-width:920px) {
+            .fix_tabbar {
+                bottom: 800px;
+            }
+            .nav_wrapper li:hover {
+                background-color: transparent;
+            }
+            .nav_wrapper li:nth-child(1):hover {
+                border-radius: 0;
+            }
+            .nav_wrapper li:nth-child(3):hover {
+                border-radius: 0;
+            }
+        }
+
+        @media(max-width:576px) {
+            .fix_tabbar {
+                position: fixed;
+                z-index: 99;
+                bottom: 0;
+                right: 0;
+                border-radius: 20px 20px 0 0;
+                width: 100%;
+                background-color: rgba(0,0,0,.7);
+                text-align: center;
+                transition: all .2s ease;
+            }
+            .nav_wrapper {
+                display: flex;
+                justify-content:space-around;
+            }
+            .nav_wrapper li {
+                margin-bottom: 0;
+            }
+        }
+
+        /* 表單 */
+        .outpage_iframe {
+            height: 400px;
+            position:static;/* 放湛揚網站 */
+        }
+        @media(max-width:920px) {
+            .outpage_iframe {
+                height: 600px;
+            }
+        }
+        @media(max-width:576px) {
+            .outpage_iframe {
+                height: 650px;
+            }
+        }
+
+        /* 御守btn */
+        .alink {
+            text-decoration: none;
+        }
+
+        .bar_wpp {
+            position: fixed;
+            bottom: 20px;
+            right: 15px;
+            z-index: 999;
+            opacity:1 !important;/* 放湛揚網站 */
+            /* overflow: hidden; */
+            animation-name: appear111;
+            animation-duration: 3.5s;
+            animation-iteration-count:infinite;
+            animation-delay: 1.5s;
+        }
+
+        @keyframes appear111 {
+        0% {
+            transform: translate(0, 0);
+        }
+        50% {
+            transform: translate(0, -15px);
+        }
+        100% {
+            transform: translate(0, 0);
+        }
+        }
+
+        .bar_wpp img {
+            width: 100px;
+            height: auto;
+        }
+
+        .bar_wpp img:hover {
+            animation-name: appear222;
+            animation-duration: 3s;
+            animation-iteration-count:infinite;
+            /* animation-delay: 1.5s; */
+        }
+
+        @keyframes appear222 {
+        0% {
+        }
+        50% {
+            filter:drop-shadow(0px 0px 20px rgb(255, 207, 207)) ;
+        }
+        100% {
+        }
+        }
+        .bar_wpp:hover, .bar_wpp:active {
+            filter: brightness(1.2);
+        }
+
+        /* Loading */
+        #preloader {/*   這是整個會蓋住畫面的底色色塊  */
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            left: 0%;
+            top: 0%;
+            background-color: #fff;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #status {/*   這是中間loading的gif坐標css,我們盡量讓他畫面置中  */
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .progress-bar {
+            width: 100px; /* 整個進度條的寬度 */
+            background-color: #cfcfcf; /* 進度條背景色 */
+            border-radius: 20px; /* 圓角 */
+            overflow: hidden; /* 隱藏超出部分 */
+        }
+
+        .progress {
+            width: 0; /* 初始寬度為 0 */
+            height: 6px; /* 進度條高度 */
+            background-color: #004797; /* 進度條顏色 */
+            border-radius: 5px; /* 圓角 */
+            animation: fillProgress 1s ease-in-out forwards; /* 應用動畫 */
+        }
+
+        @keyframes fillProgress {
+            to { width: 100%; } /* 動畫結束時寬度為 100% */
+        }
+
+        /* table */
+        @media(max-width:768px) {
+            .table_price {
+                display: none;
+            }
+        }
+        .header-fixed {
+			width: 100%;
+			text-align: center;
+            color: #fff;
+		}
+		.header-fixed th {
+			height: 60px;
+			font-weight: bold;
+            border-bottom: 1px solid #ccc;
+		}
+        .header-fixed th:nth-child(1) {
+			text-align: left;
+		}
+		.header-fixed td {
+	        height: 40px;
+	        border-bottom: 1px solid #ccc;
+	    }
+        .header-fixed td:nth-child(1) {
+            text-align: left;
+	    }
+    </style>
+</head>
+<body>
+    <!-- 01 -->
+    <div class="my-5">
+        <div class="container hero">
+            <picture data-aos="zoom-in" data-aos-duration="500" data-aos-delay="100" data-aos-easing="ease-in-out" data-aos-offset="0">
+                <source media="(min-width: 768px)" srcset="https://x.webdo.cc/userfiles/27760799/image/title_txt-lg.png">
+                <source media="(max-width: 767px)" srcset="https://x.webdo.cc/userfiles/27760799/image/title_txt-sm.png">
+                <img src alt>
+            </picture>
+            <!-- <img src="img/title_txt1.png" alt=""> -->
+            <div class="Area_active"></div>
+        </div>
+        <div class="container sub_title">
+            <p>&emsp;&emsp;安克諾斯<sup>®</sup> Acronis Cyber Protect 創新整合『備份復原、網路安全、端點保護』三大核心功能的解決方案，全球數座CPOC提供ACP客戶專屬的『智慧型防護計劃』，讓客戶了解全球發生的資安新聞外，更可輕鬆掃描、一鍵修補等，進而強化內部裝置免於受到威脅攻擊。透過單一中控台，簡化IT管理、端點部署及報告等工作，幫企業節省大量時間和金錢，是龍年最佳網路安全創新的防護解決方案。</p>
+        </div>
+    </div>
+    
+    <!-- 02 -->
+    <div class="middle_wrap my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-7 Area_center mb-5">
+                    <img class="dragonimg" src="https://x.webdo.cc/userfiles/27760799/image/maincenter_img.png" alt="">
+                </div>
+                <div class="col-12 col-md-5 Area_center">
+                    <div class="container-wrap">
+                        <button class="quiz_btn" onclick="showImages()">立即測試
+                            <span style="color: #dddddd;font-size: .8em;text-align: center;font-weight: bold;display: block;">(&nbsp;測驗您今年資安運勢&nbsp;)</span>
+                        </button>
+                        
+                        <div class="container-inner">
+                            <div id="image-container">
+                                <!-- 預設圖片，一開始先顯示，之後隱藏 -->
+                                <img id="default-image" src="https://x.webdo.cc/userfiles/27760799/image/path_to_default_image.png" alt="Default Image" style="display: block;">
+                                <img id="image1" src="https://x.webdo.cc/userfiles/27760799/image/ACP_img01.png" alt="Image 1">
+                                <img id="image2" src="https://x.webdo.cc/userfiles/27760799/image/ACP_img02.png" alt="Image 2">
+                                <img id="image3" src="https://x.webdo.cc/userfiles/27760799/image/ACP_img03.png" alt="Image 3">
+                                <img id="image4" src="https://x.webdo.cc/userfiles/27760799/image/ACP_img04.png" alt="Image 4">
+                                <img id="image4" src="https://x.webdo.cc/userfiles/27760799/image/ACP_img05.png" alt="Image 5">
+                                <img id="image4" src="https://x.webdo.cc/userfiles/27760799/image/ACP_img06.png" alt="Image 6">
+                                <img id="image4" src="https://x.webdo.cc/userfiles/27760799/image/ACP_img07.png" alt="Image 7">
+                                <img id="image4" src="https://x.webdo.cc/userfiles/27760799/image/ACP_img08.png" alt="Image 8">
+                                <img id="image4" src="https://x.webdo.cc/userfiles/27760799/image/ACP_img09.png" alt="Image 9">
+                            </div>
+                            <!-- 新增用來顯示文字的元素 -->
+                            <p id="image-sequence" class="img-txt"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 03 -->
+    <div class="Area_active2 mt-5">
+        <div class="container pt-5">
+            <div class="h2_title">
+                <h2>活動內容</h2>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-6 active_p Area_center">
+                    <p>安克諾斯<sup>®</sup> 訂閱授權讓企業輕鬆就享有原廠支援及更新服務，湛揚科技新春賀喜推出Acronis Cyber Protect「龍年禦守」
+                        活動：<span>吉日起購買Acronis Cyber Protect 伺服器2年訂閱即刻
+                        加送1年，享『禦守3年』授權；購買Acronis Cyber Protect 伺服器3年訂閱即刻加送2年，享『禦守5年』授權！</span>
+                        『安克諾斯<sup>®</sup> 龍年御守』給您超值價格，久久守護，是龍年最佳安全選擇！<br>
+                    <span style="font-size: 0.9rem;color: #ccc;">*加送之授權，限同一家公司使用，不得轉讓</span>
+                    <span style="font-size: 0.9rem;color: #ccc;background-color: #D0311B;">*活動至2024/09/30</span>
+                    </p>
+                </div>
+                <div class="col-12 col-md-12 col-lg-6 Area_center my-3 table_price">
+                    <table cellspacing="0" cellspadding="0" class="header-fixed">
+                        <thead>
+                            <tr>
+                                <th>新春優惠價</th>
+                                <th class="">1年</th>
+                                <th class="">2年</th>
+                                <th class="">3年</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="">Acronis Cyber Protect for Server</td>
+                                <td class="">30,880</td>
+                                <td class="">39,880</td>
+                                <td class="">44,980</td>
+                            </tr>
+                            <tr>
+                                <td class="">Acronis Cyber Protect Advanced for Server</td>
+                                <td class="">46,880</td>
+                                <td class="">62,880</td>
+                                <td class="">75,980</td>
+                            </tr>
+                            <tr>
+                                <td class="">Acronis Cyber Protect for Virtual Host</td>
+                                <td class="">35,880</td>
+                                <td class="">46,880</td>
+                                <td class="">54,980</td>
+                            </tr>
+                            <tr>
+                                <td class="">Acronis Cyber Protect Advanced for Virtual Host</td>
+                                <td class="">60,880</td>
+                                <td class="">80,880</td>
+                                <td class="">95,980</td>
+                            </tr>
+                            <tr>
+                                <td class="">Acronis Cyber Protect Advanced for Universal</td>
+                                <td class="">63,880</td>
+                                <td class="">86,880</td>
+                                <td class="">105,980</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div>
+
+            </div>
+            <iframe class="outpage_iframe" src="https://www.bvtl.com.tw/sheet-2024-acronis-event/" width="100%" scrolling="no" frameborder="0">
+                你的瀏覽器不支援 iframe
+            </iframe>
+        </div>
+    </div>
+
+    <!-- 側邊btn -->
+    <div class="fix_tabbar">
+        <div>
+            <ul class="nav_wrapper">
+                <li><a target="_blank" href="https://www.t-tech.com.tw/portal_d2.php?owner_num=d2_20067&button_num=d2&go_form=askl" title="商品詢價">商品詢價</a></li>
+                <li><a target="_blank" href="https://www.t-tech.com.tw/b1page-b1_26059-b1-1486.html" title="免費測試">免費測試</a></li>
+                <li><a target="_blank" href="https://www.t-tech.com.tw/index.php" title="回首頁">回首頁</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 御守btn -->
+    <div class="bar_wpp">
+        <a class="alink" href="https://www.t-tech.com.tw/index.php" title="湛揚官網" target="_blank">
+            <img src="https://x.webdo.cc/userfiles/27760799/image/activebtn.png" alt="">
+        </a>
+    </div>
+
+    <!-- Loading -->
+    <div id="preloader">
+        <!-- <div id="status"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921"/></div> -->
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+    </div>
+
+    <script>
+        //占卜
+        function showImages() {
+            var images = document.querySelectorAll('#image-container img');
+            var count = 0;
+            var imageSequenceElement = document.getElementById('image-sequence');
+            var defaultImage = document.getElementById('default-image');
+
+            // 定義文字內容
+            var textContentArray = [
+                '一個健全的資安計劃應該是全面覆蓋各個層面，包括資料防護、網路安全和管理，就像Acronis Cyber Protect一樣。',
+                '技術、政策、培訓需要在組織中協調和整合管理，以實現更多的資訊安全，就像WithSecure Business Suite一樣。',
+                '分析資訊並檢測異常情況，保護企業免受攻擊，就像WithSecure Elements Endpoint Protection一樣。',
+                '勇敢面對挑戰，探索真正的網路安全防護，保持競爭力，就像Acronis Cyber Protect Home Office一樣。',
+                '合作夥伴和供應商的選擇，以及如何與他們合作，對於確保資訊安全至關重要，就像Acronis Cyber Protect Cloud一樣。',
+                '建立強大的防禦機制，是保護系統和資料免受入侵和威脅的第一步，就像Sophos XGS Firewall一樣。',
+                '聽取資安專業人員建議，保障企業資訊安全，就像WithSecure Elements EDR一樣。',
+                '評估最適合自己的防毒軟體，做正確的選擇，就像Norton 360一樣。',
+                '持續監控才能應對隱匿性高、難以察覺的威脅和漏洞，就像WithSecure Elements VM一樣。',
+            ];
+
+            // 移除前一次最終隨機的圖片的 border 效果
+            images.forEach(function(image) {
+                image.style.border = '10px solid transparent';
+            });
+
+            // 移除預設圖片，不納入隨機選擇
+            var imagesWithoutDefault = Array.from(images).filter(function(image) {
+                return image !== defaultImage;
+            });
+
+            function showImageSequence() {
+                for (var i = 0; i < imagesWithoutDefault.length; i++) {
+                    (function(index) {
+                        setTimeout(function() {
+                            imagesWithoutDefault[index].style.display = 'block';
+                        }, i * 100); // 每隔1秒顯示一張圖片
+                    })(i);
+                }
+
+                setTimeout(function() {
+                    imagesWithoutDefault.forEach(function(image) {
+                        image.style.display = 'none';
+                        image.style.left = '0'; // 重置 left 属性
+                    });
+                    count++;
+                    if (count < 2) {
+                        showImageSequence();
+                    } else {
+                        showRandomImage();
+                    }
+                }, (imagesWithoutDefault.length + 1) * 100); // +1 秒是为了确保所有图片显示完毕
+            }
+
+            function showRandomImage() {
+                var randomIndex = Math.floor(Math.random() * imagesWithoutDefault.length);
+                imagesWithoutDefault.forEach(function(image, index) {
+                    if (index === randomIndex) {
+                        image.style.display = 'block';
+                        image.style.border = '10px solid #fff'; // 添加 border 样式
+                        image.style.margin = 'auto'; // 居中
+                        image.style.left = '0'; // 重置 left 属性
+                        // 更新文字內容為隨機的圖片順序對應的文字
+                        imageSequenceElement.textContent = textContentArray[index];
+                    } else {
+                        image.style.display = 'none';
+                    }
+                });
+            }
+
+            showImageSequence();
+        }
+    </script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        $(window).load(function() { // 確認整個頁面讀取完畢再將這三個div隱藏起來
+            $("#status").fadeOut(50); //delay --> 延遲幾秒才fadeOut
+            $("#preloader").fadeOut(50);
+        })
+    </script>
+</body>
+</html>
