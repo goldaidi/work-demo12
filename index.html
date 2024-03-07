@@ -412,45 +412,6 @@
             filter: brightness(1.2);
         }
 
-        /* Loading */
-        #preloader {/*   這是整個會蓋住畫面的底色色塊  */
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            left: 0%;
-            top: 0%;
-            background-color: #fff;
-            z-index: 9999;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        #status {/*   這是中間loading的gif坐標css,我們盡量讓他畫面置中  */
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .progress-bar {
-            width: 100px; /* 整個進度條的寬度 */
-            background-color: #cfcfcf; /* 進度條背景色 */
-            border-radius: 20px; /* 圓角 */
-            overflow: hidden; /* 隱藏超出部分 */
-        }
-
-        .progress {
-            width: 0; /* 初始寬度為 0 */
-            height: 6px; /* 進度條高度 */
-            background-color: #004797; /* 進度條顏色 */
-            border-radius: 5px; /* 圓角 */
-            animation: fillProgress 1s ease-in-out forwards; /* 應用動畫 */
-        }
-
-        @keyframes fillProgress {
-            to { width: 100%; } /* 動畫結束時寬度為 100% */
-        }
-
         /* table */
         @media(max-width:768px) {
             .table_price {
@@ -620,14 +581,6 @@
         </a>
     </div>
 
-    <!-- Loading -->
-    <div id="preloader">
-        <!-- <div id="status"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921"/></div> -->
-        <div class="progress-bar">
-            <div class="progress"></div>
-        </div>
-    </div>
-
     <script>
         //占卜
         function showImages() {
@@ -705,11 +658,6 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
-
-        $(window).load(function() { // 確認整個頁面讀取完畢再將這三個div隱藏起來
-            $("#status").fadeOut(50); //delay --> 延遲幾秒才fadeOut
-            $("#preloader").fadeOut(50);
-        })
     </script>
 </body>
 </html>
